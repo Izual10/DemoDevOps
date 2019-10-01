@@ -11,6 +11,12 @@ pipeline {
             }
         }
 
+		stage('SonarQube analysis') {
+    def scannerHome = tool 'SonarScanner 4.0';
+    withSonarQubeEnv('http://192.168.56.51:9000') { 
+      sh "${scannerHome}/bin/sonar-scanner"
+    }
+  }
        
 
 
