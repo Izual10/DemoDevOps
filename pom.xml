@@ -118,6 +118,11 @@
 
 <build>
 	<plugins>
+	<plugin>
+  <groupId>org.sonarsource.scanner.maven</groupId>
+  <artifactId>sonar-maven-plugin</artifactId>
+  <version>3.2</version>
+</plugin>
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-compiler-plugin</artifactId>
@@ -235,6 +240,11 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		<sonar.host.url>http://192.168.56.51:9000</sonar.host.url>
+  <sonar.login>5db897b6a2578f1363544b54cb0dce8a6d0bbf00</sonar.login>
+  <sonar.language>java</sonar.language>
+  <sonar.scm.provider>git</sonar.scm.provider>
 	</properties>
 
 
